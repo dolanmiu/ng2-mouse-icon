@@ -1,6 +1,6 @@
 {
   "name": "ng2-mouse-icon",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
