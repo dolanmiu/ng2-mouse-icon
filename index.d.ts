@@ -1,1 +1,1 @@
-export * from './src/mouse-icon.component';
+export * from './src/mouse-icon.module';

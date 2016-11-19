@@ -1,25 +1,14 @@
 var webpack = require('webpack');
-var helpers = require('./helpers');
-var fs = require('fs');
-
-var nodeModules = {};
-fs.readdirSync('node_modules')
-    .filter(function(x) {
-        return ['.bin'].indexOf(x) === -1;
-    })
-    .forEach(function(mod) {
-        nodeModules[mod] = 'commonjs ' + mod;
-    });
 
 module.exports = {
     devtool: 'source-map',
 
     entry: {
-        'main': './main/index.ts'
+        'main': './src/mouse-icon.module.ts'
     },
 
     output: {
-        path: helpers.root('dist'),
+        path: './dist',
         publicPath: './',
         filename: '[name].js',
         chunkFilename: '[id].chunk.js'
@@ -31,18 +20,15 @@ module.exports = {
 
     module: {
         loaders: [{
-            test: /\.ts$/,
-            loaders: ['awesome-typescript-loader']
-        }]
+                test: /\.ts$/,
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+            },
+            { test: /\.css/, loader: 'raw' },
+            { test: /\.json/, loader: 'json' },
+            { test: /\.scss/, loader: 'raw!sass' },
+            { test: /\.html/, loader: 'raw' }
+        ]
     },
-
-    externals: nodeModules,
-
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['main']
-        })
-    ],
 
     target: "web"
 };
