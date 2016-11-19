@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { STYLES } from './templates';
 
 @Component({
-    selector: 'app-mouse-icon',
+    selector: 'mouse-icon',
     template: `
         <div class="mouse-icon">
             <div class="wheel"></div>
