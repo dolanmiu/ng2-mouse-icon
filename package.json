@@ -2,9 +2,10 @@
   "name": "ng2-mouse-icon",
   "version": "1.0.0",
   "description": "A trendy modern mouse icon widget I always seem to use. So, I decided to make a handy re-usable component.",
-  "main": "components.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && tsc -p src"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/dolanmiu/ng2-mouse-icon/issues"
   },
-  "homepage": "https://github.com/dolanmiu/ng2-mouse-icon#readme"
+  "homepage": "https://github.com/dolanmiu/ng2-mouse-icon#readme",
+  "devDependencies": {
+    "@angular/core": "^2.2.1",
+    "webpack": "^1.13.3"
+  }
 }
