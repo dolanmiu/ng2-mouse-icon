@@ -1,39 +1,48 @@
 {
   "name": "ng2-mouse-icon",
-  "version": "1.0.0",
-  "description": "A trendy modern mouse icon widget I always seem to use. So, I decided to make a handy re-usable component.",
-  "main": "index.js",
+  "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && webpack --config config/webpack.config.js"
+    "lint": "tslint src/**/*.ts",
+    "test": "tsc && karma start",
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "build": "rm -rf dist && tsc",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dolanmiu/ng2-mouse-icon.git"
+    "url": "https://github.com/dolanmiu/ng2-mouse-icon"
+  },
+  "author": {
+    "name": "Dolan Miu",
+    "email": "dolan_miu@hotmail.com"
   },
   "keywords": [
+    "angular",
+    "angular2",
     "mouse",
     "animated",
     "modern"
   ],
-  "author": "Dolan Miu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dolanmiu/ng2-mouse-icon/issues"
   },
-  "homepage": "https://github.com/dolanmiu/ng2-mouse-icon#readme",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "dependencies": {
+  },
   "devDependencies": {
-    "@angular/common": "^2.2.1",
-    "@angular/compiler": "^2.2.1",
-    "@angular/core": "^2.2.1",
-    "@angular/forms": "^2.2.1",
-    "@angular/http": "^2.2.1",
-    "@angular/platform-browser": "^2.2.1",
-    "@ngtools/webpack": "^1.1.7",
-    "angular2-template-loader": "^0.6.0",
-    "awesome-typescript-loader": "^3.0.0-beta.3",
-    "rxjs": "^5.0.0-rc.3",
-    "webpack": "^1.13.3",
-    "zone.js": "^0.6.26"
+    "@angular/core": "^2.0.0",
+    "@angular/common": "^2.0.0",
+    "codelyzer": "^0.0.20",
+    "rxjs": "5.0.0-beta.12",
+    "tslint": "^3.15.1",
+    "typescript": "2.0.2",
+    "typings":"^1.0.4",
+    "zone.js": "0.6.23"
+  },
+  "engines": {
+    "node": ">=0.8.0"
   }
 }
