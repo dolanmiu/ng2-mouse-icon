@@ -1,1 +1,1 @@
-exports.MouseIconModule = require('./src/mouse-icon.module').MouseIconModule;
+exports.MouseIconComponent = require('./src/mouse-icon.component').MouseIconComponent;
